@@ -15,11 +15,26 @@
         echo '<br>'; //breaks line
 
         //mas, single quoted não o fazem.
-        echo 'My number is $mynumber !';
+        echo 'My number is $mynumber !<br>';
         //TIP_TIP_TIP: em string, sempre single_quote. Quando quiser mostrar variável, mostre com double_quoted
+        
+        //double quoted não funciona com constante:
+        const ESTADO = "SP";
+        echo "<br>Estado ESTADO<br>";
+        echo "Maneira correta: Estado " . ESTADO . "<br>";
 
         echo '<br>';
 
+    //Mais praticos sobre single quoted e double quoted
+
+    // concatenação de strings
+    $language = 'php \u{1F418}';
+    $second_language = "php	\u{1F418} <br>";
+    $course = 'Curso em Vídeo';
+    echo $course . $language;
+    echo $course . $second_language;
+    
+    echo "<br>";
 
     //Obter tamanho de uma string
         $mystring = 'Hello, my name is Gabriel!';
