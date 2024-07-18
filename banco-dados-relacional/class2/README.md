@@ -4,31 +4,39 @@
 
 Os comandos utilizados para criar o banco e praticar, são:
 
-```sql
+```
 CREATE DATABASE TestDB;
-USE TestDB;CREATE TABLE Customers (    CustomerID INT AUTO_INCREMENT PRIMARY KEY,
+USE TestDB;
+
+CREATE TABLE Customers (    CustomerID INT AUTO_INCREMENT PRIMARY KEY,
     FirstName VARCHAR(50),
     LastName VARCHAR(50),
     Email VARCHAR(100)
-);CREATE TABLE Products (    ProductID INT AUTO_INCREMENT PRIMARY KEY,
+);
+CREATE TABLE Products (    ProductID INT AUTO_INCREMENT PRIMARY KEY,
     ProductName VARCHAR(100),
     Price DECIMAL(10, 2)
-);CREATE TABLE Orders (    OrderID INT AUTO_INCREMENT PRIMARY KEY,
+);
+CREATE TABLE Orders (    OrderID INT AUTO_INCREMENT PRIMARY KEY,
     CustomerID INT,
     ProductID INT,
     OrderDate DATE,
     Quantity INT,
     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
     FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
-);INSERT INTO Customers (FirstName, LastName, Email) VALUES('John', 'Doe', 'john.doe@example.com'),
+);
+
+INSERT INTO Customers (FirstName, LastName, Email) VALUES('John', 'Doe', 'john.doe@example.com'),
 ('Jane', 'Smith', 'jane.smith@example.com'),
 ('Michael', 'Johnson', 'michael.johnson@example.com'),
 ('Emily', 'Davis', 'emily.davis@example.com'),
-('Daniel', 'Brown', 'daniel.brown@example.com');INSERT INTO Products (ProductName, Price) VALUES('Laptop', 999.99),
+('Daniel', 'Brown', 'daniel.brown@example.com');
+INSERT INTO Products (ProductName, Price) VALUES('Laptop', 999.99),
 ('Smartphone', 499.99),
 ('Tablet', 299.99),
 ('Headphones', 89.99),
-('Smartwatch', 199.99);INSERT INTO Orders (CustomerID, ProductID, OrderDate, Quantity) VALUES(1, 1, '2023-01-01', 1),
+('Smartwatch', 199.99);
+INSERT INTO Orders (CustomerID, ProductID, OrderDate, Quantity) VALUES(1, 1, '2023-01-01', 1),
 (1, 2, '2023-01-02', 2),
 (1, 3, '2023-01-03', 1),
 (2, 1, '2023-01-04', 1),
