@@ -12,6 +12,10 @@ Exemplo oposto (NÃO FBF):
 
 A) => AB^^B
 
+
+![1721255589330](image/README/1721255589330.png)
+
+
 **Ordem de aplicação dos conectivos lógicos**
 
 Assim como o PEMDAS (Parênteses, expoente,multiplicação, divisão, adição e subtração), temos uma ordem para resolver as expressão, confira a ordem:
@@ -54,3 +58,21 @@ Exemeplo: Gabriel está feliz e não está feliz.
 # Exercícios
 
 Vamos praticar um pouco com exercícios de FBF (Fórmula Bem Formulada).
+
+1. Represente as seguintes proposições utilizando a linguagem da lógica clássica proposicional. Utilize os símbolos proposicionais C (está chovendo) e N (está nevando).
+
+    a) Está chovendo, mas não está nevando.
+
+    b) Não é o caso que está chovendo ou nevando.
+
+    c) Se não está chovendo, então está nevando.
+
+    d) Não é o caso que se está chovendo então está nevando.
+
+    e) Está chovendo se e somente se está nevando.
+
+    f) Se está nevando e chovendo, então está nevando.
+
+    g) Se não está chovendo, então não é o caso que está nevando e chovendo.
+
+Resposta
