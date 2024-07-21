@@ -8,15 +8,13 @@ Bom, a resposta é, conforme chegam novas pessoas, elas vão se alocando ao fina
 
 Uma fila pode conter as seguintes operações
 
-insert / enqueue - para adição de novos elementos
+* insert / enqueue - para adição de novos elementos
+* remove / dequeue - para remover o primeiro elemento
 
-remove / dequeue - para remover o primeiro elemento
+* peek - para retornar o primeiro elemento da fila
+* size - para retornar o tamanho da fila
 
-peek - para retornar o primeiro elemento da fila
-
-size - para retornar o tamanho da fila
-
-isEmpty - para verificar o tamanho da fila
+* isEmpty - para verificar o tamanho da fila
 
 
 ### Implementação de fila
