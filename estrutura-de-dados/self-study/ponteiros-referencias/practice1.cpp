@@ -15,7 +15,7 @@ using namespace std;
 // int main(int argc, char* argv[]){
 //     // Declarations
 //     int a = 9;
-//     cout << &a;
+//     cout << &a;v
 //     /*
 //         Outputs tests results:
 //         0xf86abffe2c
