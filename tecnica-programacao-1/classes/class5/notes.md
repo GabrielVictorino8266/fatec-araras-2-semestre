@@ -1,10 +1,8 @@
 # Orientação a Objetos
 
-
 #### Classes
 
 Classes são representações de um conjunto de objetos. Classes possuem métodos e atributos.
-
 
 #### Tipos de acesso de uma classe
 
@@ -28,11 +26,9 @@ class produtos(){
 
 São variáveis e são declaradas fora de métodos. O acesso de atributos contemplam os 3 anteriores apresentados.
 
-
 **Métodos**
 
 O necessário é apenas dois, nome e parenteses. Estes indicam ações.
-
 
 ```java
 class produtos{
@@ -46,3 +42,9 @@ class produtos{
 	}
 }
 ```
+
+### Objetos
+
+Objetos são instâncias de classes, neste caso, sendo uma cópia completa da classe. Para a instaciação:
+
+- new: serve para instanciar o objeto.
