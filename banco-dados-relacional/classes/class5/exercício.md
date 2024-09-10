@@ -41,15 +41,39 @@
    (SELECT MIN(id) FROM venda WHERE datemissao = (SELECT MIN(datemissao) FROM venda LIMIT 1))
    ```
 5) selecione o id, data de emissão e o total(valor) de cada venda
-7) selecione todos os produtos que ainda não foram vendidos
+
+   ```sql
+   SELECT venda.id, venda.datemissao, SUM(itemvenda.quantidade * itemvenda.precounitario) AS 'Total' FROM venda INNER JOIN itemvenda ON venda.id = itemvenda.idvenda GROUP BY venda.id, venda.datemissao;
+   ```
+6) selecione todos os produtos que ainda não foram vendidos
 
    NOT IN (Select ....)
-8) selecione todos os produtos que foram vendidos
+
+   ```sql
+   SELECT * FROM produto WHERE produto.id NOT IN (SELECT itemvenda.idproduto FROM itemvenda)
+   ```
+7) selecione todos os produtos que foram vendidos
 
    IN (Select ...)
-9) selecione a quantidade de vendas por cliente
-10) selecione a quantidade de vendas por forma de pagamento
-11) Selecione o id, idformapagto da venda e a descricao da forma
+
+   ```sql
+   SELECT * FROM produto WHERE produto.id IN (SELECT itemvenda.idproduto FROM itemvenda)
+   ```
+8) selecione a quantidade de vendas por cliente
+
+   ```sql
+   SELECT id, idcliente FROM venda GROUP BY idcliente
+
+
+
+   SELECT venda.idcliente, COUNT(*) AS 'QTDE_VENDA_CLI' FROM venda WHERE venda.idcliente IN (SELECT idvenda FROM itemvenda) GROUP BY venda.idcliente
+   ```
+9) selecione a quantidade de vendas por forma de pagamento
+
+   ```sql
+   SELECT venda.idformapagto, COUNT(*) AS forma_pgto FROM venda GROUP BY venda.idformapagto
+   ```
+10) Selecione o id, idformapagto da venda e a descricao da forma
 
    de pagamento de todos as vendas realizadas entre 01/01/2019
 
