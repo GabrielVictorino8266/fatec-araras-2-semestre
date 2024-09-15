@@ -1,0 +1,22 @@
+revisão da aula
+
+ponteiros
+structs
+
+
+//Revisão de código:
+
+struct CadastroAluno{
+    string nome;
+    float nota1;
+    float nota2;
+};
+
+CadastroAluno aluno;//Variável do tipo cadastro aluno.
+CadastroAluno *vetor_aluno; //Ponteiro de cadastro aluno apontando para CadastroAluno
+
+
+####EXERCICIO 2 - Cadastro de Trufas####
+
+
+
