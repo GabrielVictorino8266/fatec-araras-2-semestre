@@ -27,14 +27,14 @@ struct Client{
     string cidade;
     string estado;
     double total_amount;
-    Parcelas parcelas[12];
+    Parcelas *parcelas;
 };
 
 int main(){
     int N_CLIENTS = 2;
     int parcelas_a_pagar = 0;
     
-    Client clientes[N_CLIENTS];
+    Client *clientes = new Client[N_CLIENTS];
 
     for(int i = 0;i < N_CLIENTS;i++){//get the first struct info
         cout << "Starting a new client... " << i+1 << "\n\n" << endl;
@@ -46,6 +46,10 @@ int main(){
         }
         
         cout << "-----------------Client #" << i+1 << "-----------------\n\n";
+        cout << "Informe q quantidade de parcelas: \n";
+        cin >> parcelas_a_pagar;
+
+        clientes[i].parcelas= new Parcelas[parcelas_a_pagar];
 
         clientes[i].nome = getName();
         clientes[i].endereco = getAddress();
@@ -78,6 +82,8 @@ int main(){
             cout << "Date of parcela: " << clientes[i].parcelas[i_parcelas].data << endl;
             cout << "Local of parcela: " << clientes[i].parcelas[i_parcelas].local << endl;
             cout << "Value of parcela: " << clientes[i].parcelas[i_parcelas].valor << endl;
+
+            delete[] clientes[i].parcelas;
         };
     }
 
