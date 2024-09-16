@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cstddef> //nos permite usar o NULL
 using namespace std;
 
 string getSabor();

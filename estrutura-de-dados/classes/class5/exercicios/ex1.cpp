@@ -1,116 +1,102 @@
 #include <iostream>
 #include <string>
+
 using namespace std;
 
-string getNomeAluno();
-string getRa();
-string getCurso();
-string getNomeDisciplina();
-string getHorario();
-string getDiaSemana();
-
-struct Disciplinas{
+struct Disciplina_s{
     string nome;
     string dia_semana;
-    string horario;
+    string horario_frequencia;
 };
 
-struct Aluno{
+struct Aluno_s{
     string nome;
     string ra;
     string curso;
-    Disciplinas *disciplinas;
+    Disciplina_s *disc_ptr;
     int qtde_disciplinas;
 };
+
+//functions
+void cadastroDisciplinas(Aluno_s &aluno){
+    aluno.disc_ptr = new Disciplina_s[aluno.qtde_disciplinas];
+
+    while(aluno.qtde_disciplinas > 7 || aluno.qtde_disciplinas < 0){
+        cout << "!!!!!!!!!Digite uma qtde de disciplinas menor que 7.!!!!!!!!!\n";
+        cin >> aluno.qtde_disciplinas;
+    }
+
+    for(int i = 0;i < aluno.qtde_disciplinas;i++){
+        cout << "*************CADASTRO DISCIPLINA " << i + 1 << "*************\n\n";
+        cout << "Nome da disciplina: \n";
+        cin.ignore();  // Limpa o buffer
+        getline(cin, aluno.disc_ptr[i].nome);  // Usa o índice para acessar as disciplinas
+
+        cout << "Horario da disciplina: \n";
+        getline(cin, aluno.disc_ptr[i].horario_frequencia);
+
+        cout << "Dia da semana da disciplina: \n";
+        getline(cin, aluno.disc_ptr[i].dia_semana);
+    };
+};
+
+void cadastrarAluno(Aluno_s *aluno){
+    cout << "Nome do aluno: \n";
+    cin.ignore();
+    getline(cin, aluno->nome);
+
+    cout << "Ra do aluno: \n";
+    getline(cin, aluno->ra);
+
+    cout << "Curso do aluno: \n";
+    getline(cin, aluno->curso);
+
+    cout << "Informe a qtde disciplinas do aluno: \n";
+    cin >> aluno->qtde_disciplinas;
+
+    cadastroDisciplinas(*aluno);
+
+};
+
+void exibirInfo(Aluno_s aluno){
+    cout << "Nome aluno: " << aluno.nome << endl;
+    cout << "RA aluno: " << aluno.ra << endl;
+    cout << "Curso do aluno: " << aluno.curso << endl;
+    cout << "Qtde de disciplinas aluno: " << aluno.qtde_disciplinas << endl;
+    
+    for(int i = 0; i < aluno.qtde_disciplinas;i++){
+        cout << "*****EXIBINDO DISCIPLINA " << i + 1 << "*****\n\n";
+        cout << "Nome disciplina: " << aluno.disc_ptr[i].nome << endl;
+        cout << "Horario disciplina: " << aluno.disc_ptr[i].horario_frequencia << endl;
+        cout << "Dia semana : " << aluno.disc_ptr[i].dia_semana << endl;
+    }
+
+}
 
 int main(){
-    string nome, ra, curso, dia_semana, horario;
-    int qtde_disciplinas;
-    
     int qtde_alunos;
-    cout << "Informe a quantidade de alunos: \n";
+    
+    cout << "Informe a qtde de alunos: " << endl;
     cin >> qtde_alunos;
 
-    Aluno *alunos = new Aluno[qtde_alunos];
-
-    for(int i = 0; i < qtde_alunos;i++){
-        cout << "\n\n*****************ALUNO # " << i + 1 << "*****************\n\n";
-
-        cout << "\nQuantidade de disciplinas do aluno # " << i + 1 << ":\n";
-        cin >> alunos[i].qtde_disciplinas;
-        alunos[i].disciplinas = new Disciplinas[alunos[i].qtde_disciplinas];
-
-
-        alunos[i].nome = getNomeAluno();
-        alunos[i].ra = getRa();
-        alunos[i].curso = getCurso();
-
-        for(int disc = 0; disc < alunos[i].qtde_disciplinas;disc++){
-            cout << "Disciplina # " << disc + 1 << "\n";
-            alunos[i].disciplinas->nome = getNomeDisciplina();
-            alunos[i].disciplinas->horario = getHorario();
-            alunos[i].disciplinas->dia_semana = getDiaSemana();
-        }
+    Aluno_s *aluno = new Aluno_s[qtde_alunos];//criei e aloquei aluno
+    
+    //cadastro
+    for(int i =0;i < qtde_alunos;i++){
+        cout << "*************CADASTRO DO ALUNO # " << i + 1 << "*************" << endl;
+        cadastrarAluno(&aluno[i]);
     }
 
-    for(int i = 0;i < qtde_alunos;i++){
-        cout << "*****************MOSTRANDO ALUNO # " << i + 1 << "*****************\n\n";
-        cout << "Nome aluno: " << alunos[i].nome << "\n";
-        cout << "Aluno ra: " << alunos[i].ra << "\n";
-        cout << "Aluno ra: " << alunos[i].curso << "\n";
-
-        for(int disc = 0; disc < alunos[i].qtde_disciplinas;disc++){
-            cout << "*********************************DISCIPLINAS # " << disc + 1 << "*********************************\n";
-            cout << alunos[i].disciplinas[disc].nome << endl;
-            cout << alunos[i].disciplinas[disc].horario << endl;
-            cout << alunos[i].disciplinas[disc].dia_semana << endl;
-
-            delete[] alunos[i].disciplinas;
-        }
+    //exibir
+    for(int i =0;i < qtde_alunos;i++){
+        cout << "*************CADASTRO DO ALUNO # " << i + 1 << "*************" << endl;
+        exibirInfo(aluno[i]);
     }
-    delete[] alunos;
-}
 
+    for(int i =0;i < qtde_alunos;i++){
+        delete[] aluno[i].disc_ptr;
+    }
 
-string getNomeAluno() {
-    string nomeAluno;
-    cout << "Informe o nome aluno: \n";
-    cin.ignore();
-    getline(cin, nomeAluno);
-    return nomeAluno;
-}
-string getNomeDisciplina() {
-    string nomeDisciplina;
-    cout << "Informe o nome da disciplina: \n";
-    cin.ignore();
-    getline(cin, nomeDisciplina);
-    return nomeDisciplina;
-}
-
-string getRa() {
-    string ra;
-    cout << "Informe o ra: \n";
-    cin >> ra;
-    return ra;
-}
-
-string getCurso() {
-    string curso;
-    cout << "Informe o curso: \n";
-    cin.ignore();
-    getline(cin, curso);
-    return curso;
-}
-
-string getHorario() {
-    string horario;
-    cout << "Informe o horario: \n";
-    cin >> horario;
-    return horario;
-}
-string getDiaSemana() {
-    string dia_semana;
-    cout << "Informe o dia da semana: \n";
-    cin >> dia_semana;
-    return dia_semana;
+    delete[] aluno;
+    return 0;
 }
