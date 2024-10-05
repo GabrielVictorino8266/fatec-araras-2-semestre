@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Conversor
+comment1.params=numeroDecimal
+comment1.target=Conversor(int)
+comment2.params=hexadecimal
+comment2.target=Conversor(java.lang.String)
+comment3.params=hexadecimal
+comment3.target=boolean\ isHexadecimalValido(java.lang.String)
+numComments=4

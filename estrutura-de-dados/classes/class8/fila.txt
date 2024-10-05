@@ -1,0 +1,23 @@
+Fila
+
+
+Primeiro a entrar, primeiro a sair.
+
+enqueue - adiciona
+dequeue - retira
+isEmpty - verifica se vazio
+size - retorna tamanho
+
+Implementando em c++
+
+COMO FICAM OS BURACOS DA FILA?
+
+PODEMOS REPOSICIONAR OS VALORES (DESLOCAMENTO)
+USAR MODULOS PARA ATUALIZAR VALOR INICIO E VALOR FINAL (FILA CIRCULAR)
+Fila com ponteiros (implementação com lista encadeada)
+PODEMOS GERENCIAR O TAMANHO DA FILA.
+
+Tipos de fila:
+    Fila simples (array fixo): buracos podem ser gerados, mas são evitados com deslocamento (ineficiente).
+    Fila circular: reutiliza espaços sem precisar deslocar elementos.
+    Fila com lista encadeada: elimina completamente o problema de buracos, pois os elementos são alocados dinamicamente e removidos sem deixar espaços.

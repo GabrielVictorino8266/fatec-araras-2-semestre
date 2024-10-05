@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=Classe_crescente
+comment1.params=numero1\ numero2\ numero3
+comment1.target=void\ ordenar(int,\ int,\ int)
+numComments=2

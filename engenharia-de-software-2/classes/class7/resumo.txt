@@ -1,0 +1,112 @@
+CRISTAL
+
+- METODOLOGIA DESENVOLVIDA COM BANCO CENTRAL NORUGUES
+- IMPLEMENTADO NA IBM
+
+FALHAS DEFINIDAS POR LETRAS (CORES)
+CLEAR - EQUIPES PEQUENAS (CONSTRUIR A COMUNICACAO)
+AMARELO - EQUIPE MAIOR (0-9 PESSOAS)
+LARANJA - MAIS FORMALIZAÇÃO, SUBDIVISOES (20 A 40 PESSOAS)
+VERMELHO - MAIS RIGOROSO
+
+CRITICIDADES
+
+C - CONFORT - Não é perdido muito, apenas o conforto, comodidade
+D - DISCRITIONARY - perda relativamente pequena devido a falha
+E - ESSENTIAL - a perda é relativamente grande e de alto impacto financeiro, afetando o ciclo de vida da empresa e suas projeções futuras.
+L - LIFE - Perda de uma vida humana, uma falha catastrófica.
+
+USO
+
+Funciona em ciclos
+    ciclo 1 - staging
+    ciclo 2 - edição e revisão dos objetivos.
+    ciclo 3 - monitoramento (avaliando custos e prazos)
+    inspeção do usuário (teste) com o feedback, a equipe se junta e faz um workshop reflexivo.
+
+===========================================================================================================================
+FDD - FEATURE DRIVEN DEVELOPMENT - DESENVOLVIDO POR FUNCIONALIDADES
+
+compreensao de dominio
+    - são os atores
+    - levantamento de requisitos
+    - modelagem e diagramação (parte mais visual do programa)
+
+modelo de objetos
+    - define os relacionamentos
+    - criar as classes 
+    - principalmente o diagrama de classes
+
+planejamento e FUNCIONALIDADES
+    - começando a enxergar as FUNCIONALIDADES
+    - visão geral para o projeto
+
+pergunta: na fase 3 de planejamento, leva muito tempo para atingir esta fase?
+
+etapa 4
+    - inicio de documentacao mais detalhada
+    - criterios e testes para validação e aprovação da FUNCIONALIDADES
+
+construção e inspeção
+    - testes dessas FUNCIONALIDADES
+    - garantir a qualidade do software
+
+PARTE 4 E 5 SÃO INTERATIVAS EM LOOPS
+
+Papéis e Responsabilidades:
+
+    - PM - gerente de projetos - administrador chefe, gerenciamento de pessoas, equipamento, espaço, financeiro...
+    - Arquiteto chefe - reunioes com os colaboradores, modelagem, dirige o projeto.
+    - gerente de desenvolvimento: lidera o desenvolvimento e resolve os problemas diários
+    - programadores chefes - ao longo do desenvolvimento do software, é o mais experiente, liderando pequenas pessoas (outros desenvolvedores)
+    - Class Owner - são os membros das equipes lideradas pelos programadores chefes
+    - Especialista de domínio - são os usuários e seu conhecimento em si, fornece as informações para a projeção do sistema.
+
+Vantagens
+    - Entrega rápida de valor
+    - Gerenciamento de risco
+    - Código de qualidade
+    - Comunicação eficiente
+
+Desvantagens
+    - Complexidade
+    - Não muito adpatável em mudanças rápidas
+    - Experiência requisitada.
+    - Excesso de documentação, atrasos e muito conteúdo para consumir.
+
+CASO DE USO
+    - saude
+    - financeiro
+    - software
+
+
+===========================================================================================================================
+
+
+XP
+
+EM 1990 POR KENT BACK
+
+
+PRINCIPIO
+    - COMUNICACAO
+    - SIMPLICIDADE
+    - FEEDBACK
+
+
+PRATICAS
+
+    - PLANNING GAME (Reuniao onde se cria itens e historia dos usuarios)
+    - SMALL RELEASE (entrega de blocos funcionais)
+    - Refactoring (codigo mais limpo e com design melhor)
+    - Pair Programming (Duas pessoas trabalham juntas, uma programa e a outra revisa)
+
+CCO - QUALQUER PESSOA ALTERA A BASE DE CODIGO
+
+
+VATANGENS
+
+ENTREGA RAPIDA E CONTINUA[entrega incremental, mantendo a comunicação diretamente com o cliente]
+ADAPTABILIDADE AS MUDANÇAS - GRANDE FLEXIBILIDADE
+QUALIDADE FINAL - TDD CONTRIBUI PARA DETECCAO DE ERROS
+COLABORAR - ALTERAR, ATUALIZAR E EXCLUIR
