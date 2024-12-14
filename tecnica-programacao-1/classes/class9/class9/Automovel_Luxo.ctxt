@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Automovel_Luxo
+comment1.params=p\ a\ c\ m\ d
+comment1.target=Automovel_Luxo(java.lang.String,\ int,\ java.lang.String,\ java.lang.String,\ java.lang.Boolean)
+comment2.params=
+comment2.target=java.lang.Boolean\ getDiamante()
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

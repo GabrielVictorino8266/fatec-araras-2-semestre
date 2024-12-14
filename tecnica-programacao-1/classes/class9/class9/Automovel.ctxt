@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Automovel
+comment1.params=p\ a\ c\ m
+comment1.target=Automovel(java.lang.String,\ int,\ java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getPlaca()
+comment3.params=
+comment3.target=java.lang.String\ getCor()
+comment4.params=
+comment4.target=java.lang.String\ getMarca()
+comment5.params=
+comment5.target=int\ getAno()
+numComments=6

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Automovel_Basico
+comment1.params=p\ a\ c\ m\ ar
+comment1.target=Automovel_Basico(java.lang.String,\ int,\ java.lang.String,\ java.lang.String,\ java.lang.Boolean)
+comment2.params=
+comment2.target=java.lang.Boolean\ getArCondicionado()
+numComments=3

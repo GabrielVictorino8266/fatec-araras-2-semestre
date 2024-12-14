@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Professores
+comment1.params=n\ m\ s\ c
+comment1.target=Professores(java.lang.String,\ int,\ float,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getCurso()
+numComments=3

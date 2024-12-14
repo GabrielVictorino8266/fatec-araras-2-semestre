@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Funcionario
+comment1.params=n
+comment1.target=void\ setNome(java.lang.String)
+comment2.params=m
+comment2.target=void\ setMatricula(int)
+comment3.params=s
+comment3.target=void\ setSalario(float)
+comment4.params=
+comment4.target=java.lang.String\ getNome()
+comment5.params=
+comment5.target=int\ getMatricula()
+comment6.params=
+comment6.target=float\ getSalario()
+numComments=7
